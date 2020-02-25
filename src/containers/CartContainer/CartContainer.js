@@ -28,12 +28,12 @@ const CartContainer = () => {
 
           {cart.orders.map((order, index) => {
             return (
-              <>
+              <React.Fragment key={`order-${index}`}>
                 <h5>{`Encomenda #${index+1} - ${order.unityName}`}</h5>
                 <div className="box-group" key={`order-${index}`}>
                   <OrderComponent order={order} />
                 </div>
-              </>
+              </React.Fragment>
             )
           })}
 
