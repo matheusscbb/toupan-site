@@ -1,0 +1,60 @@
+.HeaderBarContainer {
+  background-color: $white;
+  box-shadow: 0px 3px 5px #00000029 ;
+
+  .HeaderBarContainer__Navigation {
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    .HeaderBarContainer__Navigation--logo-area {
+      height: 120px;
+      display: flex;
+      padding: 0 30px;
+      margin-top: 40px;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      box-shadow: 0px 3px 5px #00000029 ;
+
+      .separator {
+        width: 1px;
+        height: 75px;
+        margin: 0 18px;
+        background: $gray-200;
+        transform: rotate(20deg);
+      }
+
+      p {
+        margin: 0;
+        color: $primary;
+        font-size: 24px;
+      }
+    }
+
+    .HeaderBarContainer__Navigation--link-area {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        padding: 0;
+        display: flex;
+        margin: 0 15px;
+        list-style: none;
+
+        &:last-of-type {
+          margin: 0;
+        }
+
+        li {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+}

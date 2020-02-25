@@ -1,0 +1,71 @@
+.CardProductContainer {
+  h4, p {
+    margin: 0;
+  }
+
+  .grid-item {
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    
+    padding: 20px 10px;
+    max-width: calc((100% / 3) - 20px);
+    transition: box-shadow 0.15s ease-in-out;
+
+    &:not(:first-of-type) {
+      border-left: 1px solid $gray-200;
+    }
+
+    @media only screen and (max-width: 876px) {
+      max-width: calc((100% / 2) - 10px);
+    }
+
+    @media only screen and (max-width: 580px) {
+      max-width: 100%;
+    }
+
+    .ProductCardComponent__image {
+      width: auto;
+      margin: auto;
+      height: 200px;
+      display: flex;
+    }
+
+    .TitleComponent {
+      margin-bottom: 20px;
+    }
+  }
+
+  // MEDIA PARA AJUSTE DE BORDAS
+  .grid-item {
+    @media only screen and (max-width: 1324px) {
+      &:not(:first-of-type) {
+        border: none;
+      }
+
+      &:not(:nth-of-type(4n)) {
+        border-left: 1px solid $gray-200;
+      }
+    }
+
+    @media only screen and (max-width: 876px) {
+      &:not(:nth-of-type(4n)) {
+        border: none;
+      }
+
+      &:nth-of-type(2n) {
+        border-left: 1px solid $gray-200;
+      }
+    }
+
+    @media only screen and (max-width: 577px) {
+      border: none !important;
+    }
+
+    &:first-of-type {
+      border: none;
+    }
+  }
+    
+}

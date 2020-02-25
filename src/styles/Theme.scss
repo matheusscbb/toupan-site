@@ -1,0 +1,144 @@
+// === Sistema de Cores === //
+
+// Tons de Cinza
+$white:    #fff !default;
+$gray-100: #F3F3F3 !default;
+$gray-200: #E6E6E6 !default;
+$gray-300: #CDD8DB !default;
+$gray-400: #D6D6D6 !default;
+$gray-500: rgb(153, 174, 184)  !default;
+$gray-600: rgb(135, 155, 165) !default;
+$gray-700: rgb(93, 119, 131) !default;
+$gray-800: #455A64 !default;
+$gray-900: #3D3D3D !default;
+$black:    #000 !default;
+
+// Paleta de Cores Principais 
+$blue:    #306DC8 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #EE3124 !default;
+$orange:  #efae40 !default;
+$yellow:  #f4ca46 !default;
+$green:   #6fad27 !default;
+$teal:    #20c997 !default;
+$cyan:    #708ea5 !default;
+
+// Cores por condições
+$primary:       #233C98 !default; 
+$secondary:     #0069A3 !default;
+$success:       #009C54 !default;
+$info:          #6f42c1 !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         #EEEEEE !default;
+$dark:          #002240 !default;
+
+
+
+
+
+// === Fontes === //
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,500i,700,700i&display=swap");
+
+$font-family-monospace:       'Rubik', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            'Fira Sans' !default;
+$font-family-sans-serif:      $font-family-base !default;
+
+$font-color:                  $gray-900;
+$font-size:                   16px;
+$font-base:                   Normal 12px/16px $font-family-base  !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            500 !default;
+
+$h1-font-size:                Bold 32px/45px $font-family-base  !default;
+// $h2-font-size:             $font-size-base * 2.4 !default;
+$h3-font-size:                Bold 22px/31px $font-family-base  !default;
+$h4-font-size:                Bold 18px/25px $font-family-base  !default;
+// $h5-font-size:             $font-size-base * 1.2 !default;
+// $h6-font-size:             $font-size-base !default;
+
+
+
+
+// === Body === //
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  color: $font-color;
+  font-size: $font-size;
+  background-color: $gray-100;
+  font-family: $font-family-base;
+
+  p {
+    font: $font-base;
+  }
+
+  h1 {
+    font: $h1-font-size;
+  }
+
+  h3 {
+    font: $h3-font-size;
+  }
+
+  h4 {
+    font: $h4-font-size;
+  }
+}
+
+.container {
+  margin: 0 10%;
+
+  @media only screen and (max-width: 996px) {
+    margin: 0 5%;
+  }
+}
+
+.inside--container {
+  padding: 0 10%;
+
+  @media only screen and (max-width: 996px) {
+    padding: 0 5%;
+  }
+}
+
+.grid-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0 -10px;
+
+  .grid-item {
+    flex: auto;
+    -ms-flex: auto;
+    flex-basis: 20%;
+    position: relative;
+    box-sizing: border-box;
+    margin: 10px;
+  }
+}
+
+.box-group {
+  padding: 20px;
+  margin: 15px 0;
+  background-color: $white;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.form-control {
+  padding: .375rem .75rem;
+  color: #495057;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $gray-400;
+  border-radius: .25rem;
+}

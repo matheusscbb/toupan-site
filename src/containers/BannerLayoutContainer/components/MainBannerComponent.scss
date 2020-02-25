@@ -1,0 +1,10 @@
+.BannerLayoutContainer {
+  &.MainBannerComponent {
+    height: 50vh;
+    min-height: 426px;
+
+    h1 {
+      margin: 70px 0 0;
+    }
+  }
+}
