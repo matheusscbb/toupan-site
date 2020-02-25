@@ -47,25 +47,27 @@ const CartContainer = () => {
 
           <div className="box-group">
             <table>
-              <tr>
-                <td>Itens</td>
-                <td>{convertPrice(cart.totalProductsPrice)}</td>
-              </tr>
-              <tr>
-                <td>Fretes</td>
-                <td>{convertPrice(cart.totalDeliveryPrice)}</td>
-              </tr>
-              <tr>
-                <td>Cupom</td>
-                <td>- {convertPrice(cart.promotion)}</td>
-              </tr>
-              <tr>
-                <td colSpan={2}><div className="separator"/></td>
-              </tr>
-              <tr>
-                <td>Total</td>
-                <td>{convertPrice(cart.totalCart)}</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>Itens</td>
+                  <td>{convertPrice(cart.totalProductsPrice)}</td>
+                </tr>
+                <tr>
+                  <td>Fretes</td>
+                  <td>{convertPrice(cart.totalDeliveryPrice)}</td>
+                </tr>
+                <tr>
+                  <td>Cupom</td>
+                  <td>- {convertPrice(cart.promotion)}</td>
+                </tr>
+                <tr>
+                  <td colSpan={2}><div className="separator"/></td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>{convertPrice(cart.totalCart)}</td>
+                </tr>
+              </tbody>
             </table>
 
             <ButtonComponent className="primary">

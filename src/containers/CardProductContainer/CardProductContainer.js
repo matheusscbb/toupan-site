@@ -8,21 +8,19 @@ import { products } from "../../services/mocks/mocks";
 const CardProductContainer = () => {
   return (<section className="CardProductContainer grid-row">
     {products.map((product, index) => (
-      <>
-        <div className="grid-item" key={`product-card-${index}`}>
-          <img
-            src={`../assets/images/${product.img}`}
-            alt={product.name}
-          />
+      <div className="grid-item" key={`product-card-${index}`}>
+        <img
+          src={`../assets/images/${product.img}`}
+          alt={product.name}
+        />
 
-          <TitleComponent
-            title={product.name}
-            subtitle={product.description}
-          />
+        <TitleComponent
+          title={product.name}
+          subtitle={product.description}
+        />
 
-          <PriceComponent price={product.price} installmentNumber={product.installmentNumber} />
-        </div>
-      </>
+        <PriceComponent price={product.price} installmentNumber={product.installmentNumber} />
+      </div>
     ))}
   </section>)
 };
